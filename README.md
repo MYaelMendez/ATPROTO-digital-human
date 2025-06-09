@@ -93,3 +93,20 @@ Once you familiarize yourself with the blueprint, you may want to further custom
 
 #### System requirements
 Ubuntu 20.04 or 22.04 based machine, with sudo privileges
+
+## æForge DomainAgent
+The repository now includes a lightweight Node.js package located in `domains/`.
+The `DomainAgent` class automates DNS configuration for AT Protocol handle
+verification via Namecheap's API.
+
+```sh
+npm install ./domains
+```
+
+```js
+import { DomainAgent, verifyRecord } from '@forge/domains';
+
+const agent = new DomainAgent({ apiUser, apiKey, clientIp });
+await agent.configureHandle('example.com', 'did:plc:1234');
+const verified = await verifyRecord('example.com', 'did:plc:1234');
+```

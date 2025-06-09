@@ -1,0 +1,10 @@
+{
+  "name": "@forge/domains",
+  "version": "0.1.0",
+  "description": "Domain management utilities for æForge onboarding",
+  "main": "DomainAgent.js",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.6.1"
+  }
+}
